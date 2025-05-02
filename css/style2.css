@@ -1,0 +1,257 @@
+/* style2.css - Calculadora HV Neonatologia */
+:root {
+    --primary-color: #5a7d7c;
+    --secondary-color: #a5c1b9;
+    --accent-color: #d4b483;
+    --alert-color: #e63946;
+    --background-color: #f8f9fa;
+    --card-color: #ffffff;
+    --text-color: #495057;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --border-radius: 10px;
+    --section-spacing: 1.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: var(--section-spacing);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* Seções principais */
+section {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: var(--section-spacing);
+    box-shadow: var(--shadow);
+}
+
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Grupos de input */
+#peso, #vigcss, #ohcss, #cacss, #nacss, #kcss {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+#peso {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+label {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+input {
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--card-color);
+    width: 100px;
+    text-align: right;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(165, 193, 185, 0.2);
+}
+
+select {
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    background-color: var(--card-color);
+    width: 100%;
+    max-width: 250px;
+    margin-top: 0.5rem;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+/* Botões */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+button:hover {
+    background-color: #486968;
+    transform: translateY(-2px);
+}
+
+#btncalcular {
+    background-color: var(--accent-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#btncalcular:hover {
+    background-color: #c19d6b;
+}
+
+.back-button {
+    background-color: var(--secondary-color);
+    margin-top: 2rem;
+}
+
+.back-button:hover {
+    background-color: #8fa89f;
+}
+
+/* Resultados */
+.prescricao-container {
+    display: none; /* Inicialmente oculto */
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.resultado-item {
+    background-color: rgba(90, 125, 124, 0.05);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.resultado-label {
+    font-weight: 500;
+    color: var(--primary-color);
+    min-width: 200px;
+}
+
+.resultado-unidade {
+    color: #868e96;
+    font-size: 0.9rem;
+}
+
+.classresultglicosado5,
+.classresultglicose50,
+.calcio-valor,
+.sodio-valor,
+.potassio-valor,
+.classresultvazao,
+.concglic-valor {
+    font-weight: 600;
+    color: var(--accent-color);
+    background-color: rgba(212, 180, 131, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    min-width: 60px;
+    text-align: right;
+}
+
+.ca-apresentacao,
+.na-apresentacao,
+.k-apresentacao {
+    font-weight: 500;
+    color: var(--primary-color);
+    min-width: 100px;
+}
+
+/* Alerta de concentração */
+.alerta-valor {
+    color: var(--alert-color);
+    font-weight: 500;
+    margin-top: 0.5rem;
+    display: block;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    body {
+        padding: 3rem;
+    }
+    
+    #hidratacaovenosa,
+    #eletrolitoshv {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    #eletrolitoshv > div {
+        margin-bottom: 0;
+    }
+    
+    button {
+        width: auto;
+        margin: 1rem auto;
+        padding: 0.8rem 2rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Destaque para seções */
+#hidratacaovenosa {
+    border-left: 4px solid var(--secondary-color);
+}
+
+#eletrolitoshv {
+    border-left: 4px solid var(--accent-color);
+}

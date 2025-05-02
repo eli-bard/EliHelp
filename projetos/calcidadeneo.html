@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Idade Neo</title>
+
+    <!--css para estilização-->
+    <link rel="stylesheet" href="../css/style3.css">
+
+</head>
+
+<body>
+
+    <header></header>
+
+
+<!-- Identificação, data de nascimento-->    
+    <section id="intro">
+    <h2>Quem é o paciente?</h2>    
+        <div id="identificacaocss">
+            Identificação
+            <input id="ident" name="ident" type="text">
+            <label for="ident"></label>
+        </div>
+        <div id="datanasc">
+            Data de nascimento
+            <input id="idinpdndata" name="dndata" type="date" required>
+            <input id="idinpdnhora" name="dnhora" type="time" required>
+            <label for="idinpdndata">dd/mm/aaaa</label>
+            <label for="idinpdnhora">hh:mm</label>
+        </div>
+        <div id="semanas-gestacao">
+            Semanas de gestação
+            <input id="idinpsemanas" name="semanas" type="number" min="22" max="42" step="1">
+            <label for="idinpsemanas">semanas</label>
+        </div>
+        <div id="dias-gestacao">
+            Dias de gestação
+            <input id="idinpdiasgest" name="diasgestacao" type="number" min="0" max="7" step="1">
+            <label for="idinpdiasgest">dia(s)</label>
+        </div>
+    </section>
+
+  <section id="botao-calcular">
+        <button id="btncalcular" type="button">calcular</button>
+    </section>
+
+<br>
+<br>
+
+    <!--RESULTADOS DE IDADE-->
+
+    <div id="idade-display">
+        Idade: <span id="idade-texto">Não calculada</span>
+    </div>
+
+<br>
+
+<button onclick="window.location.href='../index.html'" class="back-button">
+    Voltar ao Menu
+</button>
+
+  <!--script de java para execução-->
+<script src="calcidadeneo.js"></script>
+</body>
+
+</html>

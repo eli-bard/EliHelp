@@ -1,0 +1,193 @@
+/* style1.css - Calculadora de Doses de Medicamentos */
+:root {
+    --primary-color: #5a7d7c;
+    --secondary-color: #a5c1b9;
+    --accent-color: #d4b483;
+    --background-color: #f8f9fa;
+    --card-color: #ffffff;
+    --text-color: #495057;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --border-radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--card-color);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(165, 193, 185, 0.2);
+}
+
+input::placeholder {
+    color: #adb5bd;
+    opacity: 1;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    width: 100%;
+    margin: 0.5rem 0;
+    display: block;
+}
+
+button:hover {
+    background-color: #486968;
+    transform: translateY(-2px);
+}
+
+.back-button {
+    background-color: var(--accent-color);
+    margin-top: 2rem;
+}
+
+.back-button:hover {
+    background-color: #c19d6b;
+}
+
+.prescricao-container {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+    display: none; /* Inicialmente oculto */
+}
+
+.prescricao-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.resultado-item {
+    background-color: rgba(90, 125, 124, 0.05);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.resultado-label {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.resultado-unidade {
+    color: #868e96;
+    font-size: 0.9rem;
+}
+
+.classresultdil,
+.classresultasp,
+.classresultdilconcmax,
+.classresultdilconcus {
+    font-weight: 600;
+    color: var(--accent-color);
+    background-color: rgba(212, 180, 131, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    body {
+        padding: 3rem;
+    }
+    
+    .input-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    button {
+        width: auto;
+        margin: 1rem auto;
+        padding: 0.8rem 2rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.prescricao-container {
+    animation: fadeIn 0.5s ease-out forwards;
+}

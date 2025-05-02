@@ -1,0 +1,230 @@
+/* style4.css - Calculadora UCIN */
+:root {
+    --primary-color: #5a7d7c;
+    --secondary-color: #a5c1b9;
+    --accent-color: #d4b483;
+    --alert-color: #e63946;
+    --background-color: #f8f9fa;
+    --card-color: #ffffff;
+    --text-color: #495057;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --border-radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Formulário */
+#calculatorForm {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--card-color);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(165, 193, 185, 0.2);
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235a7d7c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+}
+
+/* Botões */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #486968;
+    transform: translateY(-2px);
+}
+
+.back-button {
+    background-color: var(--secondary-color);
+    margin-top: 2rem;
+}
+
+.back-button:hover {
+    background-color: #8fa89f;
+}
+
+/* Resultados */
+.result {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.5s ease-out;
+}
+
+#mainResults {
+    display: grid;
+    gap: 1rem;
+}
+
+.result-item {
+    background-color: rgba(90, 125, 124, 0.05);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.result-label {
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.result-value {
+    font-weight: 600;
+    color: var(--accent-color);
+    background-color: rgba(212, 180, 131, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+}
+
+.result-unit {
+    color: #868e96;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+/* Alertas */
+.alert {
+    color: var(--alert-color);
+    font-weight: 500;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    body {
+        padding: 3rem;
+    }
+    
+    #calculatorForm {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .form-group:last-child {
+        grid-column: span 2;
+    }
+    
+    button {
+        width: auto;
+        margin: 1rem auto 0;
+        padding: 0.8rem 2rem;
+    }
+    
+    #mainResults {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo para o dropdown de fórmulas */
+#option option {
+    padding: 0.5rem;
+}
+
+/* Destaque para fórmulas especiais */
+#option option[value*="alf"],
+#option option[value*="neo"],
+#option option[value*="gomin"] {
+    font-weight: 500;
+    background-color: rgba(212, 180, 131, 0.1);
+}
