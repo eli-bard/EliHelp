@@ -153,13 +153,21 @@ button:hover {
 
 /* Resultados */
 .prescricao-container {
-    display: none; /* Inicialmente oculto */
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
     background-color: var(--card-color);
     border-radius: var(--border-radius);
-    padding: 1.5rem;
+    padding: 0 1.5rem; /* Padding reduzido inicialmente */
     margin: 2rem 0;
     box-shadow: var(--shadow);
-    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.prescricao-container.visible {
+    opacity: 1;
+    height: auto;
+    padding: 1.5rem; /* Padding completo quando visível */
 }
 
 .resultado-item {

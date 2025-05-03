@@ -40,7 +40,7 @@ function calculate() {
 
     // Exibir resultados
     document.getElementById('mainResults').innerHTML = `
-        <h3>Resultados baseados em ${peso} kg, ${volume} ml e ${constants.name}:</h3>
+        <h3>Resultados baseados em uma criança com peso de ${peso} kg, recebendo ${volume} ml de 3/3h de ${constants.name}:</h3>
         <p>Oferta hídrica da dieta: ${OHDieta.toFixed(1)} ml/kg/dia</p>
         <p>Oferta calórica: ${OCDieta.toFixed(1)} kcal/kg/dia</p>
         <p>Oferta proteica: ${OPDieta.toFixed(1)} g/kg/dia</p>

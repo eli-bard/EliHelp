@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-});
     // Função de cálculo de HV
     function calcularHVNeo() {
         // Obter valores dos inputs
         const peso = parseFloat(document.getElementById('idinppeso').value) || 0;
-        const oh = parseFloat(document.getElementById('ininpoh').value) || 0;
+        const oh = parseFloat(document.getElementById('idinpoh').value) || 0;
         const vig = parseFloat(document.getElementById('idinpvig').value) || 0;
         const ca = parseFloat(document.getElementById('idinpca').value) || 0;
         const na = parseFloat(document.getElementById('idinpna').value) || 0;
@@ -40,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const volumeParaGlicose = volumeTotal - (volumeCalcio + volumeSodio + volumePotassio);
 
+
         const aaa = gramasGlicose * 100;
         const bbb = volumeParaGlicose * 5;
         const volumeGlicose50 = (aaa - bbb) / 45;
@@ -57,20 +56,21 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('idresultvazao').textContent = vazao.toFixed(2);
         document.getElementById('concentracao-glicose').textContent = concentracaoGlicose.toFixed(2);
 
-
         // Texto das apresentações dos eletrólitos
         document.querySelector('.ca-apresentacao').textContent = 
-        apresentacaoCa === 'glucal10' ? 'Gluconato de cálcio 10%' : '';
+            apresentacaoCa === 'glucal10' ? 'Gluconato de cálcio 10%' : '';
         document.querySelector('.na-apresentacao').textContent = 
-        apresentacaoNa === 'nacl20' ? 'NaCl 20%' :
-        apresentacaoNa === 'nacl10' ? 'NaCl 10%' :
-        '';
+            apresentacaoNa === 'nacl20' ? 'NaCl 20%' :
+            apresentacaoNa === 'nacl10' ? 'NaCl 10%' :
+            '';
         document.querySelector('.k-apresentacao').textContent = 
-        apresentacaoK === 'kcl10' ? 'KCl 10%' :
-        apresentacaoK === 'kcl191' ? 'KCl 19,1%' :
-        '';
+            apresentacaoK === 'kcl10' ? 'KCl 10%' :
+            apresentacaoK === 'kcl191' ? 'KCl 19,1%' :
+            '';
 
-        // Verificar concentração de glicose e mostrar alerta se necessário
+        document.getElementById('resultados').classList.add('visible');
+
+        // Verificar concentração de glicose
         const alertaGlic = document.getElementById('alertaglic');
         if (concentracaoGlicose > 12.5) {
             alertaGlic.textContent = 'Atenção: Concentração de glicose acima de 12.5%!';
@@ -81,11 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Adicionar evento ao botão calcular
-document.getElementById('btncalcular').addEventListener('click', function() {
-    calcularHVNeo
-});
-        
-    
+    document.getElementById('btncalcular').addEventListener('click', calcularHVNeo);
 
     // Calcular automaticamente quando os inputs mudam (opcional)
     const inputs = document.querySelectorAll('input[type="number"]');
@@ -98,3 +94,6 @@ document.getElementById('btncalcular').addEventListener('click', function() {
     selects.forEach(select => {
         select.addEventListener('change', calcularHVNeo);
     });
+
+    
+});

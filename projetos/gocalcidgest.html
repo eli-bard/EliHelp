@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Idade Gestacional</title>
+
+    <!--css para estilização-->
+    <link rel="stylesheet" href="../css/style5.css">
+
+</head>
+
+<body>
+    
+    <h1>Calculadora de Idade Gestacional</h1>
+    
+    <div class="form-group">
+        <label for="ultrassom-date">Data da realização da ecografia:</label>
+        <input type="date" id="ultrassom-date" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="gestational-weeks">Idade gestacional na ecografia (semanas):</label>
+        <input type="number" id="gestational-weeks" min="0" max="45" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="gestational-days">Idade gestacional na ecografia (dias):</label>
+        <input type="number" id="gestational-days" min="0" max="6" required>
+    </div>
+    
+    <button onclick="calculateGestationalAge()">Calcular Idade Gestacional Atual</button>
+    
+    <div id="result">
+        <p>Na data de <span id="current-date"></span>, a idade gestacional é:</p>
+        <p class="highlight"><span id="current-weeks"></span> semanas e <span id="current-days"></span> dias</p>
+        <p>Data provável do parto (40 semanas): <span id="due-date"></span></p>
+    </div>    
+
+<br>
+
+<button onclick="window.location.href='../index.html'" class="back-button">
+    Voltar ao Menu
+</button>
+
+  <!--script de java para execução-->
+<script src="gocalcidgest.js"></script>
+</body>
+
+</html>

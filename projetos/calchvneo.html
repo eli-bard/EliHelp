@@ -35,7 +35,7 @@
 
         <div id="ohcss">
             HV/OH
-            <input id="ininpoh" name="oh" type="number" step="0.01" required>
+            <input id="idinpoh" name="oh" type="number" step="0.01" required>
             <label for="idinpoh">ml/kg/dia</label>
         </div>
     </section>
@@ -59,6 +59,7 @@
             <select id="ininpnaapresent" name="na_apresentacao" required>
                 <option value="">Selecione a apresentação</option>
                 <option value="nacl20">NaCl 20%</option>
+                <option value="nacl10">NaCl 10%</option>
             </select>
         </div>
         
@@ -69,6 +70,7 @@
             <select id="idinpkapresent" name="k_apresentacao" required>
                 <option value="">Selecione a apresentação</option>
                 <option value="kcl10">KCl 10%</option>
+                <option value="kcl191">KCl 19,1%</option>
             </select>
         </div>
     </section>
@@ -99,8 +101,7 @@
             <span class="resultado-unidade">mL</span>
         </div>
 
-    <!-- Eletrólitos conforme apresentação --> 
-    <!-- Falta colocar para aparecer o nome da apresentação selecionada-->   
+    <!-- Eletrólitos conforme apresentação -->   
         <div class="resultado-item">
             <span class="ca-apresentacao"></span>
             <span class="resultado-label"> ----------</span>
