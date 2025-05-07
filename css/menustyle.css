@@ -43,6 +43,33 @@ h1 {
     margin-top: 0;
 }
 
+
+.type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.type-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.type-card h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
 /* Estilo básico para o botão de voltar */
 .back-button {
     background-color: #4a6fa5;
