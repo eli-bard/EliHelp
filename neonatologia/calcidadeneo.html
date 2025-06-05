@@ -1,79 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora Idade Neo</title>
 
     <!--css para estilização-->
-    <link rel="stylesheet" href="../../css/style3.css">
+    <link rel="stylesheet" href="../../css/style3.css" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header></header>
 
-
-<!-- Identificação, data de nascimento-->    
+    <!-- Identificação, data de nascimento-->
     <section id="intro">
-    <h2>Quem é o paciente?</h2>    
-        <div id="identificacaocss">
-            Identificação
-            <input id="ident" name="ident" type="text">
-            <label for="ident"></label>
-        </div>
-        <div id="datanasc">
-            Data de nascimento
-            <input id="idinpdndata" name="dndata" type="date" required>
-            <label for="idinpdndata">dd/mm/aaaa</label>
+      <h2>Quem é o paciente?</h2>
+      <div id="identificacaocss">
+        Identificação
+        <input id="ident" name="ident" type="text" />
+        <label for="ident"></label>
+      </div>
+      <div id="datanasc">
+        Data de nascimento
+        <input id="idinpdndata" name="dndata" type="date" required />
+        <label for="idinpdndata">dd/mm/aaaa</label>
 
-            <input id="idinpdnhora" name="dnhora" type="time" required>
-            <label for="idinpdnhora">hh:mm</label>
+        <input id="idinpdnhora" name="dnhora" type="time" required />
+        <label for="idinpdnhora">hh:mm</label>
 
-            <br>
+        <br />
+      </div>
 
-        </div>
+      <div id="semanas-gestacao">
+        Semanas de gestação
+        <input
+          id="idinpsemanas"
+          name="semanas"
+          type="number"
+          min="22"
+          max="42"
+          step="1"
+        />
+        <label for="idinpsemanas">semanas</label>
+      </div>
 
-        <div id="semanas-gestacao">
-            Semanas de gestação
-            <input id="idinpsemanas" name="semanas" type="number" min="22" max="42" step="1">
-            <label for="idinpsemanas">semanas</label>
-        </div>
+      <br />
 
-        <br>
+      <div id="dias-gestacao">
+        Dias de gestação
+        <input
+          id="idinpdiasgest"
+          name="diasgestacao"
+          type="number"
+          min="0"
+          max="7"
+          step="1"
+        />
+        <label for="idinpdiasgest">dia(s)</label>
+      </div>
 
-        <div id="dias-gestacao">
-            Dias de gestação
-            <input id="idinpdiasgest" name="diasgestacao" type="number" min="0" max="7" step="1">
-            <label for="idinpdiasgest">dia(s)</label>
-        </div>
-
-        <br>
-
+      <br />
     </section>
 
-  <section id="botao-calcular">
-        <button id="btncalcular" type="button">calcular</button>
+    <section id="botao-calcular">
+      <button id="btncalcular" type="button">calcular</button>
     </section>
 
-<br>
-<br>
+    <br />
+    <br />
 
     <!--RESULTADOS DE IDADE-->
 
     <div id="idade-display">
-        Idade: <span id="idade-texto">Não calculada</span>
+      Idade: <span id="idade-texto">Não calculada</span>
     </div>
 
-<br>
+    <br />
 
-<button onclick="window.location.href='../../index.html'" class="back-button">
-    Voltar ao Menu
-</button>
+    <button onclick="window.location.href='../teste.html'" class="back-button">
+      Voltar ao Menu
+    </button>
 
-  <!--script de java para execução-->
-<script src="../jss/calcidadeneo.js"></script>
-</body>
-
+    <!--script de java para execução-->
+    <script src="../jss/calcidadeneo.js"></script>
+  </body>
 </html>

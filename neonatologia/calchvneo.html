@@ -1,160 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora HV Neo</title>
 
     <!--css para estilização-->
-    <link rel="stylesheet" href="../../css/style2.css">
+    <link rel="stylesheet" href="../../css/style2.css" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header></header>
 
-
-<!-- Identificação, PESO, data de nascimento-->    
+    <!-- Identificação, PESO, data de nascimento-->
     <section id="intro">
-    <h2></h2>    
-        <div id="peso">
-            Peso
-            <input id="idinppeso" name="peso" type="number" step="0.001" required>
-            <label for="idinppeso">kg</label>
-        </div>
+      <h2></h2>
+      <div id="peso">
+        Peso
+        <input id="idinppeso" name="peso" type="number" step="0.001" required />
+        <label for="idinppeso">kg</label>
+      </div>
     </section>
 
-<!--SEÇÕES - HV e VIG-->
+    <!--SEÇÕES - HV e VIG-->
     <section id="hidratacaovenosa">
-        <div id="vigcss">
-            VIG
-            <input id="idinpvig" name="vig" type="number" step="0.01" required>
-            <label for="idinpvig">mg/kg/min</label>
-        </div>
+      <div id="vigcss">
+        VIG
+        <input id="idinpvig" name="vig" type="number" step="0.01" required />
+        <label for="idinpvig">mg/kg/min</label>
+      </div>
 
-        <div id="ohcss">
-            HV/OH
-            <input id="idinpoh" name="oh" type="number" step="0.01" required>
-            <label for="idinpoh">ml/kg/dia</label>
-        </div>
+      <div id="ohcss">
+        HV/OH
+        <input id="idinpoh" name="oh" type="number" step="0.01" required />
+        <label for="idinpoh">ml/kg/dia</label>
+      </div>
     </section>
 
     <!--SEÇÕES - eletrólitos-->
     <section id="eletrolitoshv">
-        <div id="cacss">
-            Cálcio
-            <input id="idinpca" name="ca" type="number" step="0.01" required>
-            <label for="idinpca">mEq/kg/dia</label>
-            <select id="idinpcaapresent" name="ca_apresentacao" required>
-                <option value="">Selecione a apresentação</option>
-                <option value="glucal10">Gluconato de cálcio 10%</option>
-            </select>
-        </div>
-        
-        <div id="nacss">
-            Sódio
-            <input id="idinpna" name="na" type="number" step="0.01" required>
-            <label for="idinpna">mEq/kg/dia</label>
-            <select id="ininpnaapresent" name="na_apresentacao" required>
-                <option value="">Selecione a apresentação</option>
-                <option value="nacl20">NaCl 20%</option>
-                <option value="nacl10">NaCl 10%</option>
-            </select>
-        </div>
-        
-        <div id="kcss">
-            Potássio
-            <input id="idinpk" name="k" type="number" step="0.01" required>
-            <label for="idinpk">mEq/kg/dia</label>
-            <select id="idinpkapresent" name="k_apresentacao" required>
-                <option value="">Selecione a apresentação</option>
-                <option value="kcl10">KCl 10%</option>
-                <option value="kcl191">KCl 19,1%</option>
-            </select>
-        </div>
+      <div id="cacss">
+        Cálcio
+        <input id="idinpca" name="ca" type="number" step="0.01" required />
+        <label for="idinpca">mEq/kg/dia</label>
+        <select id="idinpcaapresent" name="ca_apresentacao" required>
+          <option value="">Selecione a apresentação</option>
+          <option value="glucal10">Gluconato de cálcio 10%</option>
+        </select>
+      </div>
+
+      <div id="nacss">
+        Sódio
+        <input id="idinpna" name="na" type="number" step="0.01" required />
+        <label for="idinpna">mEq/kg/dia</label>
+        <select id="ininpnaapresent" name="na_apresentacao" required>
+          <option value="">Selecione a apresentação</option>
+          <option value="nacl20">NaCl 20%</option>
+          <option value="nacl10">NaCl 10%</option>
+        </select>
+      </div>
+
+      <div id="kcss">
+        Potássio
+        <input id="idinpk" name="k" type="number" step="0.01" required />
+        <label for="idinpk">mEq/kg/dia</label>
+        <select id="idinpkapresent" name="k_apresentacao" required>
+          <option value="">Selecione a apresentação</option>
+          <option value="kcl10">KCl 10%</option>
+          <option value="kcl191">KCl 19,1%</option>
+        </select>
+      </div>
     </section>
 
-<!-- BOTÃO PARA CALCULAR -->
+    <!-- BOTÃO PARA CALCULAR -->
 
     <section id="botao-calcular">
-        <button id="btncalcular" type="button">calcular</button>
+      <button id="btncalcular" type="button">calcular</button>
     </section>
 
-<br>
-<br>
+    <br />
+    <br />
 
     <!--RESULTADOS DE HV NEO-->
     <section id="resultados" class="prescricao-container">
-    <h2>Prescrição HV Neonatologia</h2>
+      <h2>Prescrição HV Neonatologia</h2>
 
-    <!-- Soro glicosado e glicose hipertônica -->
-        <div class="resultado-item">
-            <span class="resultado-label">SG 5% ----------</span>
-            <span id="idresultglicosado5" class="classresultglicosado5"></span>
-            <span class="resultado-unidade">mL</span>
-        </div>
+      <!-- Soro glicosado e glicose hipertônica -->
+      <div class="resultado-item">
+        <span class="resultado-label">SG 5% ----------</span>
+        <span id="idresultglicosado5" class="classresultglicosado5"></span>
+        <span class="resultado-unidade">mL</span>
+      </div>
 
-        <div class="resultado-item">
-            <span class="resultado-label">GH 50% ----------</span>
-            <span id="idresultglicose50" class="classresultglicose50"></span>
-            <span class="resultado-unidade">mL</span>
-        </div>
+      <div class="resultado-item">
+        <span class="resultado-label">GH 50% ----------</span>
+        <span id="idresultglicose50" class="classresultglicose50"></span>
+        <span class="resultado-unidade">mL</span>
+      </div>
 
-    <!-- Eletrólitos conforme apresentação -->   
-        <div class="resultado-item">
-            <span class="ca-apresentacao"></span>
-            <span class="resultado-label"> ----------</span>
-            <span id="calcio" class="calcio-valor">null</span>
-            <span class="resultado-unidade">mL</span>
-        </div>
+      <!-- Eletrólitos conforme apresentação -->
+      <div class="resultado-item">
+        <span class="ca-apresentacao"></span>
+        <span class="resultado-label"> ----------</span>
+        <span id="calcio" class="calcio-valor">null</span>
+        <span class="resultado-unidade">mL</span>
+      </div>
 
-        <div class="resultado-item">
-            <span class="na-apresentacao" ></span>
-            <span class="resultado-label"> ----------</span>
-            <span id="sodio" class="sodio-valor">null</span>
-            <span class="resultado-unidade">mL</span>
-        </div>
+      <div class="resultado-item">
+        <span class="na-apresentacao"></span>
+        <span class="resultado-label"> ----------</span>
+        <span id="sodio" class="sodio-valor">null</span>
+        <span class="resultado-unidade">mL</span>
+      </div>
 
-        <div class="resultado-item">
-            <span class="k-apresentacao" ></span>
-            <span class="resultado-label"> ----------</span>
-            <span id="potassio" class="potassio-valor">null</span>
-            <span class="resultado-unidade">mL</span>
-        </div>
+      <div class="resultado-item">
+        <span class="k-apresentacao"></span>
+        <span class="resultado-label"> ----------</span>
+        <span id="potassio" class="potassio-valor">null</span>
+        <span class="resultado-unidade">mL</span>
+      </div>
 
-
-    <!-- Vazão da bomba -->    
-    <div class="resultado-item">
-        <span class="vazao_bomba" ></span>
+      <!-- Vazão da bomba -->
+      <div class="resultado-item">
+        <span class="vazao_bomba"></span>
         <span class="resultado-label">Administrar EV em BIC a </span>
         <span id="idresultvazao" class="classresultvazao"></span>
         <span class="resultado-unidade">mL/hora</span>
-    </div>
+      </div>
 
-    <br>
-    <br>
+      <br />
+      <br />
 
-    <!-- Concentração de glicose -->    
-    <div class="resultado-item">
-        <span class="concentracao" ></span>
+      <!-- Concentração de glicose -->
+      <div class="resultado-item">
+        <span class="concentracao"></span>
         <span class="resultado-label">Concentração de glicose </span>
         <span id="concentracao-glicose" class="concglic-valor"></span>
         <span class="resultado-unidade">%</span>
-        <br>
+        <br />
         <span id="alertaglic" class="alerta-valor"></span>
-    </div>
-
+      </div>
     </section>
 
-    <button onclick="window.location.href='../../index.html'" class="back-button">
-        Voltar ao Menu
+    <button onclick="window.location.href='../teste.html'" class="back-button">
+      Voltar ao Menu
     </button>
 
     <footer></footer>
 
-<!--script de java para execução-->
-<script src="../jss/calchvneo.js"></script>
-</body>
-
+    <!--script de java para execução-->
+    <script src="../jss/calchvneo.js"></script>
+  </body>
 </html>
