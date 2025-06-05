@@ -1,27 +1,422 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu principal</title>
-    <link rel="stylesheet" href="css/menustyle.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Como posso te ajudar?</h1>
-        
-        <div class="type-grid">
-            <a href="index.ped.html" class="type-card">
-                <h2>Pediatria</h2>
-                <p>Posso te ajudar a aprender ou te auxiliar em cálculos na pediatria</p>
-            </a>
-            
-            <a href="index.neo.html" class="type-card">
-                <h2>Neonatologia</h2>
-                <p>Te ajudo a fazer cálculos e a aprender neonatologia se mantendo sempre atualizado</p>
-            </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EliHelp - O App que Todo Residente em Pediatria Precisa</title>
+    <link rel="stylesheet" type="text/css" href="css/stylelanding.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <img src="imgs/elihelp-logo1.png" alt="EliHelp Logo" />
         </div>
 
-    </div>
-</body>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#problem">Desafios</a></li>
+            <li><a href="#solution">Nós</a></li>
+            <li><a href="#features">Ferramentas</a></li>
+            <li><a href="#pricing">Planos</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-cta">
+          <a href="https://elihelp.vercel.app/teste" class="cta-button"
+            >TESTE</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>
+          Domine a Pediatria com
+          <span class="highlight">Confiança e Agilidade</span>
+        </h1>
+        <p class="subtitle">
+          <strong
+            >Calculadoras inteligentes + Dicas objetivas + Consultoria
+            especializada</strong
+          ><br />
+          Tudo o que você precisa para tomar decisões precisas durante a
+          residência e chegar impressionando os preceptores
+        </p>
+        <a href="#pricing" class="cta-button">QUERO APRENDER MAIS RÁPIDO →</a>
+        <img
+          src="imgs/exemplo-app-igusg.png"
+          alt="App EliHelp mostrando calculadora pediátrica"
+          class="hero-image"
+        />
+        <p class="small-text">
+          <img
+            src="imgs/shield-black-icon.svg"
+            alt="Seguro"
+            style="height: 16px"
+          />
+          Seus colegas já usam o EliHelp
+        </p>
+      </div>
+    </section>
+
+    <!-- Seção Problema -->
+    <section class="problem" id="problem">
+      <div class="container">
+        <h2 class="section-title">
+          A Residência em Pediatria Está te
+          <span class="underline">Desgastando?</span>
+        </h2>
+        <div class="problem-content">
+          <div class="problem-text">
+            <h3>Você se identifica com algum desses desafios?</h3>
+            <ul>
+              <li>
+                <strong>⏱️ Pressão no plantão:</strong> Fórmulas e doses que
+                precisam ser calculadas em segundos
+              </li>
+              <li>
+                <strong>📚 Conteúdo disperso:</strong> Resumos incompletos e
+                protocolos difíceis de memorizar
+              </li>
+              <li>
+                <strong>💊 Dúvidas frequentes:</strong> "Qual a dose de
+                amoxicilina para esta criança de 12kg?"
+              </li>
+              <li>
+                <strong>📉 Medo de errar:</strong> Aquele frio na barriga ao
+                prescrever medicações complexas
+              </li>
+              <li>
+                <strong>👨‍⚕️ Falta de mentoria:</strong> Sem tempo para tirar
+                dúvidas com preceptores
+              </li>
+            </ul>
+            <div class="problem-quote">
+              <p>
+                "O EliHelp facilitou todo o processo de início da minha
+                residência de pediatria."
+              </p>
+              <p class="author">— Testemunho 1</p>
+            </div>
+          </div>
+          <div class="problem-image">
+            <img src="imgs/doctor.jpg" alt="Médico residente sobrecarregado" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Solução -->
+    <section class="solution" id="solution">
+      <div class="container">
+        <h2 class="section-title">
+          O <span class="brand-color">EliHelp</span> é Como Ter um Preceptor
+          <span class="underline">No Seu Bolso</span>
+        </h2>
+        <div class="solution-cards">
+          <div class="solution-card">
+            <img src="imgs/calculator-icon.svg" alt="Calculadora" />
+            <h3>Calculadoras que Ensinam</h3>
+            <p>
+              Não apenas resultados - <strong>entenda a lógica</strong> por trás
+              de cada fórmula pediátrica enquanto calcula.
+            </p>
+          </div>
+          <div class="solution-card">
+            <img src="imgs/e-learning-icon.svg" alt="Aulas" />
+            <h3>Resumos profissionais</h3>
+            <p>
+              <strong>Resumos em texto ou vídeos de 5-10min</strong> sobre os
+              temas que mais aparecem na prática clínica.
+            </p>
+          </div>
+          <div class="solution-card">
+            <img src="imgs/interview-icon.svg" alt="Consultoria" />
+            <h3>Intimidade 1:1</h3>
+            <p>
+              Dúvidas complexas?
+              <strong>Faça suas solicitações</strong> individuais para obter uma
+              resposta mais aprofundada e ver mudanças no aplicativo
+            </p>
+          </div>
+        </div>
+        <div class="solution-cta">
+          <a href="#pricing" class="cta-button secondary">VER PLANOS →</a>
+          <p class="small-text">Disponível para Web</p>
+          <p class="small-text">Logo logo, disponível para Android</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Recursos -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">
+          Facilitando sua vida em
+          <span class="brand-color">Um Único App</span>
+        </h2>
+        <div class="features-container">
+          <div class="feature">
+            <div class="feature-icon">🧮</div>
+            <div class="feature-text">
+              <h3>Calculadoras</h3>
+              <p>
+                <strong>Dosagem de medicamentos</strong>, fluidoterapia, DVAs e
+                dicas para emergências - todas com explicações.
+              </p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🎥</div>
+            <div class="feature-text">
+              <h3>Resumos em Notion, Obsidian e Drive</h3>
+              <p>
+                <strong>Os principais protocolos e aulas resumidos</strong> para
+                facilitar seu processo de estudos e aprendizado.
+              </p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📝</div>
+            <div class="feature-text">
+              <h3>Fluxogramas para Download</h3>
+              <p>
+                <strong>Algoritmos prontos</strong> para impressão e consulta
+                rápida no plantão.
+              </p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🔄</div>
+            <div class="feature-text">
+              <h3>Atualizações Constantes</h3>
+              <p>
+                Conteúdo sempre alinhado com as
+                <strong>últimas diretrizes e protocolos</strong>
+              </p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">👨‍⚕️</div>
+            <div class="feature-text">
+              <h3>Feito por Residente</h3>
+              <p>
+                Desenvolvido por um
+                <strong>residente de pediatria que vive suas dores</strong> -
+                não por uma empresa sem experiência clínica.
+              </p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-text">
+              <h3>Sugestões de produtos para a residência</h3>
+              <p>
+                Encontre <strong>os melhores produtos</strong> - cruciais para
+                plantões como pediatra ou residente de pediatria.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">
+          Quem Usa <span class="underline">Recomenda</span>
+        </h2>
+        <div class="testimonial-slider">
+          <div class="testimonial active">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">
+              "O EliHelp facilita muito meus plantões, especialmente por
+              minimizar o tempo para calcular muitas das coisas que acabamos
+              gastando muito tempo em pediatria. É como um curso introdutório
+              que deveria ser obrigatório para a residência."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="imgs/avatar-icon.svg"
+                alt="Residente"
+                class="testimonial-photo"
+              />
+              <div>
+                <p class="name">Testemunho 2</p>
+                <p class="role">Residente</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">""</p>
+            <div class="testimonial-author">
+              <img
+                src="imgs/profile-girl-icon.svg"
+                alt="Staff"
+                class="testimonial-photo"
+              />
+              <div>
+                <p class="name">Testemunho 3</p>
+                <p class="role">Residente</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <div class="slider-dot active" data-slide="0"></div>
+            <div class="slider-dot" data-slide="1"></div>
+          </div>
+        </div>
+        <div class="trust-badges">
+          <img
+            src="imgs/made-in-brazil-icon.svg"
+            alt="Utilizado por residentes de todo o Brasil"
+          />
+          Utilizado por residentes de todo o Brasil
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Preço -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <h2 class="section-title">
+          Invista no Seu <span class="brand-color">Futuro como Pediatra</span>
+        </h2>
+        <p class="pricing-subtitle">
+          Menos que um café por dia para ter segurança nas suas decisões
+        </p>
+
+        <div class="pricing-cards">
+          <div class="pricing-card">
+            <h3>Residente</h3>
+            <div class="price">R$0,33<span>/dia</span></div>
+            <p class="billing-info">*Cobrado mensalmente (R$9,90)</p>
+            <ul class="pricing-features">
+              <li>✔ Principais calculadoras pediátricas</li>
+              <li>✔ Descontos nos resumos</li>
+              <li>✔ Receitas básicas para download</li>
+              <li>✔ Atualizações constantes</li>
+            </ul>
+            <a href="#" class="cta-button secondary">ASSINAR</a>
+          </div>
+
+          <div class="pricing-card popular">
+            <div class="popular-tag">MELHOR CUSTO-BENEFÍCIO</div>
+            <h3>Residente PRO</h3>
+            <div class="price">R$8,30<span>/mês*</span></div>
+            <p class="billing-info">*Cobrado anualmente (R$99,60)</p>
+            <ul class="pricing-features">
+              <li>✔ Tudo do plano Residente</li>
+              <li>✔ Acesso a TODAS as calculadoras</li>
+              <li>
+                ✔ Direito solicitações mensais de aplicativos ou fluxogramas
+              </li>
+              <li>✔ Materiais exclusivos</li>
+              <li>✔ Desconto generoso nos resumos</li>
+            </ul>
+            <a href="#" class="cta-button">QUERO SER PRO →</a>
+            <p class="guarantee">3 dias de garantia</p>
+          </div>
+        </div>
+        <!--
+        <div class="corporate-pricing">
+          <p>
+            Precisa de licenças para sua residência?
+            <a href="#">Fale conosco</a> sobre planos institucionais.
+          </p>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- Seção CTA Final -->
+    <section class="cta-final">
+      <div class="container">
+        <h2>
+          Comece Agora e Ganhe <span class="highlight"> + Confiança</span> na
+          Sua Prática
+        </h2>
+        <div class="cta-benefits">
+          <div class="benefit">
+            <img src="imgs/sand-clock-full-icon.svg" alt="Rápido" />
+            <p>Configuração em 2 minutos</p>
+          </div>
+          <div class="benefit">
+            <img src="imgs/mobile-icon.svg" alt="Dispositivos" />
+            <p>Use no celular, tablet ou computador</p>
+          </div>
+          <div class="benefit">
+            <img src="imgs/cloud-data-icon.svg" alt="Atualizações" />
+            <p>Conteúdo sempre atualizado</p>
+          </div>
+        </div>
+        <div class="cta-buttons">
+          <a href="#pricing" class="cta-button">QUERO APRENDER MAIS →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>EliHelp</h3>
+            <p>Seu companheiro na residência pediátrica</p>
+            <p>
+              Desenvolvido por
+              <strong
+                >Dr. Eliabe R. S., Usuário experiente de IA, Residente de
+                pediatria e Empreendedor Digital</strong
+              >
+            </p>
+            <div class="social-links">
+              <a href="#">Instagram</a>
+              <a href="#">LinkedIn</a>
+              <a href="#">E-mail</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Recursos</h3>
+            <ul>
+              <li><a href="#">Calculadoras</a></li>
+              <li><a href="#">Resumos</a></li>
+              <li><a href="#">Indicações de produtos</a></li>
+              <li><a href="#">Consultoria</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Institucional</h3>
+            <ul>
+              <li><a href="#">Sobre o Criador</a></li>
+              <li><a href="#">Trabalhe Conosco</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Suporte</h3>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+              <li><a href="#">Termos de Uso</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2025 EliHelp - Todos os direitos reservados</p>
+          <p>
+            Não substitui a orientação de preceptores ou instituições de ensino
+          </p>
+          <p>A melhor recomendação é: faça residência!</p>
+        </div>
+      </div>
+    </footer>
+    <script src="css/sliderlanding.js"></script>
+  </body>
 </html>
